@@ -1,0 +1,109 @@
+@media screen and (max-width: 1000px) {
+.sideCol, .logoBottomPart, .subMenu { display:none;}
+.gotop {display:none !important;}
+
+.wrapper {padding:17px 26px 0;}
+
+.headerWrapper {position:static; padding:0 26px; width:auto;}
+.header { padding:22px 3px 6px 106px;}
+.menuBlock .mainMenu li a{ padding: 0 10px 5px 10px;}
+.menuBlock .mainMenu .active a{ color:#ff8762;}
+.menuBlock .mainMenu .active:before{ display:none;}
+.searchHolder input[type="text"]{ width:67%;}
+
+.logoTopPart {width:75px; left:7px;}
+.searchHolder{ top:-2px;}
+.menuBlock,
+.searchBlock { float:none; width:auto;}
+
+.usefulLinks { float:left; margin-bottom:0;}
+.searchHolder {clear:none; margin-left:140px;}
+
+.article{ width:50%;}
+.contentCol { float: none; width:auto; margin-right:-20px;}
+.devider{ display:none;}
+.articleBig{ width:50%;}
+.articleBig .par{ padding:7px 12px 8px 14px; font-size:11px;}
+.articleBig .imageWrapper img { margin-bottom:16px;}
+.articleBig .headingArticle{ position: static; padding:0;}
+.articleBig .headingArticle:before{ display:none;}
+.articleBig .headingArticle h2{ font-size:19px; text-decoration:none;line-height:25px;}
+.articleBig .headingArticle h2:hover{ text-decoration: underline;}
+.articleBig .controls {padding:0;}
+.articleBig h2,
+.articleBig h2 a{ color:#000;}
+.articleBig .controls .views,
+.articleBig .controls .comments{ color:#7f7f7f;}
+.articleBig .controls .section{ padding-left:0; color:#ff8762; float:right;}
+.articleBig .controls .views{ background-position: 0 -27px;}
+.articleBig .controls .comments{ background-position: 0 -13px;}
+.articleBig p { text-indent:0; font-size:14px; line-height:22px;;}
+.articleBig h2:hover a {text-decoration:none;}
+.contentCol .banner{ width:50%;}
+.tabletDevider{ display:block;}
+
+.he{ height:54px;}
+.pager{ padding:30px 0 0 0; text-align:center;}
+.pager li{ float:none; display:inline-block;}
+.pager li:first-child{ margin-left:-6px;}
+.pager li:last-child{ clear:both; display:block; float:none; font-size:10px; margin-top:54px;}
+.pager li:last-child a{ padding:10px 38px 10px 40px; display:inline;}
+
+
+
+.footer{ height: auto; margin-top:0; padding-left:27px; padding-right:15px;}
+.footer .footerMenu{ border-bottom:none; float:left; width:45%;}
+.footer .footerMenu li{ float:none; margin:0; padding-bottom:16px;}
+.footer .footerDetails{ float:right; width:50%;}
+.footer .footerContent .footerDetails .colA{ float: none; margin-right:0;}
+.footer .footerContent .footerDetails .colB{ float:none; margin-right:0;}
+.footer .footerContent .footerDetails .colC{ float:none;}
+}
+
+@media screen and (max-width: 480px) {
+.header{ padding:3px 0 0 0; height:45px; border-bottom:2px solid #000; margin-bottom:-10px;}
+.headerWrapper{ background: none; padding:0 3px;}
+.logoTopPart{ width:33px; top:10px; height:auto; left:14px;}
+.logoBottomPart{ background:url(../images/mobile_logo.png) no-repeat; background-size:cover; display:block; top:12px; width:121px; left:54px; height:27px}
+.logoBottomPart:after,
+.logoBottomPart img,
+.menuBlock .mainMenu,
+.searchBlock,
+.tabletDevider,
+.controls,
+.article h6 { display:none;}
+
+.menuBlock{ width:45px; height:43px; background:url(../images/icons/mobile_menu.png) no-repeat; float:right; }
+.menuBlock:hover{ cursor:pointer;}
+.header .showMobileMenu{ background-position:bottom;}
+.showMobileMenu .mainMenu{ display:block; position:absolute; z-index:5; top:50px; left:0; right:0; background:#fff; border:#020303 1px solid;}
+.showMobileMenu .mainMenu li{ float:none; border-top:#cccccc 1px solid; font-size:22px; line-height:30px;}
+.showMobileMenu .mainMenu li:first-child{ border-top: none;}
+.showMobileMenu .mainMenu .active{ background:#ff8762; margin:0 -1px -1px -1px; border-top:#ff8762 1px solid;}
+.showMobileMenu .mainMenu .active a{ color:#fff;}
+.showMobileMenu .mainMenu li a{ padding:15px 0 13px 22px;}
+.showMobileMenu .mainMenu li a:first-child{ padding-left:22px;}
+.wrapper{ padding:0 17px 0 15px;}
+.contentCol{ margin-right:0;}
+
+.article,
+.contentCol .banner{ width: auto; float:none; padding-right:0; margin-top:-1px;}
+
+.article{ border-bottom:1px solid #cccccc; margin-bottom:0; padding-top:23px;}
+.article .imageWrapper img{ margin-bottom:20px;}
+.article h2{ padding-bottom:13px; font-size:19px; line-height:27px;}
+.article p{ padding-bottom:18px;}
+
+.pager{ margin-right:0; margin-top:-1px; position:relative;}
+
+.footer .footerMenu,
+.footer .footerDetails{ float:none; width:auto;}
+
+.pager{ text-align:center;}
+.pager li{ float:none; display:inline-block;}
+.pager li:last-child{clear:both; float:none; margin-top:54px; display:block;}
+.pager li:last-child a{ display:inline;}
+
+
+
+}
