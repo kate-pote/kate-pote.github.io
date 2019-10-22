@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <form name="myForm" onsubmit="myFormOnSubmit();return false">
+        <input type="text" name="todo">
+        <input type="submit" value="Add todo">
+    </form>
+    <ul id="todoList">
+    </ul>
+    <p>You have <span id="lScounter">0</span> todos.</p>
+
+    <script>
+    'use strict';
+
+    let selectForm = document.forms.myForm;
+    let getInput = selectForm.elements.todo;
+    let todoList = document.getElementById('todoList');
+    let lScounter = document.getElementById('lScounter');
+
+    let countToDoS = function () {
+        let lSlenght = localStorage.length;
+        lScounter.innerHTML = lSlenght;
+    };
+    
+    let createWriteDeleteElement = function (localStorageGeneratedKey) {
+        let todoListItem = document.createElement('li');
+        let todoListItemDelete = document.createElement('input');
+        todoListItemDelete.setAttribute('type', 'button');
+        todoListItemDelete.setAttribute('value', 'Delete');
+        todoListItem.innerHTML = localStorage.getItem(localStorageGeneratedKey);
+        todoListItem.setAttribute('id', localStorageGeneratedKey);
+        todoListItem.append(todoListItemDelete);
+        todoList.append(todoListItem);
+
+        todoListItemDelete.onclick = function () {
+            todoListItem.remove();
+            localStorage.removeItem(localStorageGeneratedKey);
+            countToDoS();
+        }
+    };
+
+    let myFormOnSubmit = function(){
+        let getValueTodo = getInput.value;
+        const generateRandomID = Math.random().toString(36).substr(2, 9);
+        localStorage.setItem(generateRandomID, getValueTodo);
+        createWriteDeleteElement(generateRandomID);
+        countToDoS();
+    };
+
+    for(let i=0; i<localStorage.length; i++) {
+        let localStorageKey = localStorage.key(i);
+        createWriteDeleteElement(localStorageKey);
+        countToDoS();
+    };
+
+</script>
+</body>
+</html>
