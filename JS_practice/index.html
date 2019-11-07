@@ -21,42 +21,51 @@
     let todoList = document.getElementById('todoList');
     let lScounter = document.getElementById('lScounter');
 
-    let countToDoS = function () {
-        let lSlenght = localStorage.length;
-        lScounter.innerHTML = lSlenght;
-    };
-    
-    let createWriteDeleteElement = function (localStorageGeneratedKey) {
+    let toDoListArray = JSON.parse(localStorage.getItem("toDoListArray") || "[]");
+
+    let countToDoS = () => lScounter.innerHTML = toDoListArray.length;
+    let arrayStringify =  () => localStorage.setItem("toDoListArray", JSON.stringify(toDoListArray));
+
+
+    const liEvent = function (item){
         let todoListItem = document.createElement('li');
         let todoListItemDelete = document.createElement('input');
+
+        todoListItem.append(item.text);
         todoListItemDelete.setAttribute('type', 'button');
         todoListItemDelete.setAttribute('value', 'Delete');
-        todoListItem.innerHTML = localStorage.getItem(localStorageGeneratedKey);
-        todoListItem.setAttribute('id', localStorageGeneratedKey);
+        todoListItem.setAttribute('id', item.id);
         todoListItem.append(todoListItemDelete);
         todoList.append(todoListItem);
+        countToDoS();
 
         todoListItemDelete.onclick = function () {
             todoListItem.remove();
-            localStorage.removeItem(localStorageGeneratedKey);
+            toDoListArray.forEach(function (i, index) {
+                if (i.id === item.id){
+                    toDoListArray.splice(index, 1);
+                }
+            });
+            arrayStringify();
             countToDoS();
-        }
+        };
     };
+
+    toDoListArray.forEach((item) => liEvent(item));
 
     let myFormOnSubmit = function(){
         let getValueTodo = getInput.value;
         const generateRandomID = Math.random().toString(36).substr(2, 9);
-        localStorage.setItem(generateRandomID, getValueTodo);
-        createWriteDeleteElement(generateRandomID);
-        countToDoS();
-    };
 
-    for(let i=0; i<localStorage.length; i++) {
-        let localStorageKey = localStorage.key(i);
-        createWriteDeleteElement(localStorageKey);
-        countToDoS();
-    };
+        let toDoListObject = {
+            text : getValueTodo,
+            id : generateRandomID
+        };
 
-</script>
+        toDoListArray.push(toDoListObject);
+        arrayStringify();
+        liEvent(toDoListObject);
+    };
+    </script>
 </body>
 </html>
