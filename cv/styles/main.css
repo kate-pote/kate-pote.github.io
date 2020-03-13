@@ -1,0 +1,220 @@
+/*---------------------------------
+    Fonts
+  ---------------------------------*/
+/*---------------------------------
+    Font sizes
+  ---------------------------------*/
+/*---------------------------------
+    Colors
+  ---------------------------------*/
+/*---------------------------------
+    Bootstrap variables
+  ---------------------------------*/
+/*---------------------------------
+    Fonts
+  ---------------------------------*/
+/*---------------------------------
+    Font sizes
+  ---------------------------------*/
+/*---------------------------------
+    Colors
+  ---------------------------------*/
+/*---------------------------------
+    Bootstrap variables
+  ---------------------------------*/
+body {
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+.container {
+  position: relative;
+  max-width: 960px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 30px;
+  color: #fff;
+}
+
+h2 {
+  font-size: 28px;
+  color: #fff;
+}
+
+h3 {
+  font-size: 20px;
+  color: #000;
+  line-height: 28px;
+}
+
+h4 {
+  font-size: 16px;
+  color: #000;
+  line-height: 25px;
+}
+
+p {
+  line-height: 27px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+ul li {
+  margin-bottom: 6px;
+}
+
+/*header*/
+.header {
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 60px;
+  width: 100%;
+  z-index: 1;
+}
+
+.header .position {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 17px 0 17px 50px;
+  z-index: -5;
+}
+
+.header .position h2 {
+  padding-right: 90px;
+  text-align: center;
+}
+
+.header .name {
+  position: relative;
+  background: #E85353;
+  padding: 27px 0;
+}
+
+.header .name:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -5px;
+  left: -50px;
+  background: #E85353;
+  border: #fff 5px solid;
+  border-right: none;
+  border-radius: 50% 0 0 50%;
+  z-index: -1;
+}
+
+.header h1 {
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.side-col {
+  padding-top: 180px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#68676e), color-stop(#717177), color-stop(#7b7a80), color-stop(#84848a), to(#8e8e93));
+  background-image: linear-gradient(to right, #68676e, #717177, #7b7a80, #84848a, #8e8e93);
+}
+
+.cont-col {
+  padding-top: 170px;
+}
+
+/*side column*/
+.side-col {
+  color: #fff;
+  padding-left: 35px;
+}
+
+.side-col a {
+  color: #fff;
+}
+
+.side-col .icon-list {
+  margin-left: -15px;
+}
+
+.side-col .icon-list i,
+.side-col .svg-inline--fa{
+  color: #7DCAFF;
+  padding-right: 5px;
+
+}
+
+.side-col h3 {
+  color: #fff;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.side-col h3:before {
+  content: "";
+  position: absolute;
+  background: #7DCAFF;
+  height: 2px;
+  left: -35px;
+  right: 40%;
+  bottom: -5px;
+}
+
+.side-col .dot-list li {
+  position: relative;
+}
+
+.side-col .dot-list li:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #7DCAFF;
+  top: calc(50% - 5px / 2);
+  left: -15px;
+}
+
+/*content side*/
+.cont-col h3 {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.cont-col h3:before {
+  content: "";
+  position: absolute;
+  background: #7DCAFF;
+  height: 4px;
+  left: -15px;
+  right: 40%;
+  bottom: -5px;
+}
+
+.cont-col .fa-circle {
+  font-size: 4px;
+  vertical-align: middle;
+}
+
+.cont-col ul li a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.cont-col ul li a:hover {
+  text-decoration: none;
+}
+
