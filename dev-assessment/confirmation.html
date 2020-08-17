@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="HTML Evaluation">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ekaterina Potyomkina</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/modernizr.js"></script>
+  </head>
+  <body>
+
+  <button class="primary-btn"
+          onclick="document.getElementById('modal2').style.display='flex'">Open Popup</button>
+  <div id="modal2" class="modal-backdrop">
+
+    <main class="modal-container confirmation">
+      <header class="modal-header">
+        <button class="close-btn" onclick="document.getElementById('modal2').style.display='none'">
+        </button>
+      </header>
+
+      <section class="main-cont">
+        <h1>
+          Just Like Old Friends
+        </h1>
+        <ul class="shape-devider">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <p>We'll keep you updated on any deals, news, or gossip that comes our way!</p>
+        <button class="primary-btn" onclick="document.getElementById('modal2').style.display='none'">Go Shop!</button>
+      </section>
+    </main>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

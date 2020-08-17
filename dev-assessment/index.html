@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="HTML Evaluation">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ekaterina Potyomkina</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/modernizr.js"></script>
+  </head>
+  <body>
+
+    <button class="primary-btn"
+            onclick="document.getElementById('modal1').style.display='flex'">Open Popup</button>
+    <div id="modal1" class="modal-backdrop">
+      <main class="modal-container">
+      <header class="modal-header">
+        <button class="close-btn"
+                onclick="document.getElementById('modal1').style.display='none'">
+        </button>
+      </header>
+      <div class="section-wrapper">
+      <section class="main-cont">
+        <h1>
+          Get Your Style On
+        </h1>
+      </section>
+      <section class="devider-block">
+        <span class="devider-cont">
+          &#38;
+        </span>
+      </section>
+      <section class="mark-block">
+        <strong>20</strong>
+        <p>%<span>off</span></p>
+      </section>
+      </div>
+      <form class="signup-form" name="signupform" action="confirmation.html" method="get" >
+        <label for="email"></label>
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+        <button class="primary-btn" type="submit" onclick="validateEmail(event)">Sign Up</button>
+      </form>
+    </main>
+    </div>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
