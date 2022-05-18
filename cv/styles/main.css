@@ -176,6 +176,7 @@ ul li {
   height: 4px;
   border-radius: 50%;
   background: #232323;
+  margin: 0 2px;
 }
 
 .cont-col ul li a {
