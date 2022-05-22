@@ -172,11 +172,11 @@ ul li {
 .cont-col .circle {
   vertical-align: middle;
   display: inline-block;
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: #232323;
-  margin: 0 2px;
+  margin: 0 6px;
 }
 
 .cont-col ul li a {
